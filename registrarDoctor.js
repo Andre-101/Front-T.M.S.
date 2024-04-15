@@ -7,6 +7,7 @@ const signupButton = document.getElementById('signupButton');
 signupButton.addEventListener('click', signup);
 
 
+
 //FUNCIONES
 function signup(){
     let name = nameInput.value;

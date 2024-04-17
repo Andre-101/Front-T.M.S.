@@ -11,7 +11,7 @@ signupButton.addEventListener('click', signup);
 //FUNCIONES
 function signup(){
     let name = nameInput.value;
-    let password = passInput.value;
+    let password = passwordInput.value;
     let email = emailInput.value;
 
     let user = {

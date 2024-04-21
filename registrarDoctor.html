@@ -23,10 +23,10 @@
         margin: 50px auto;
         text-align: center;
     }
-    input[type="text"], input[type="email"], input[type="password"] {
+    input {
         width: 100%;
         padding: 10px;
-        margin: 10px 0;
+        margin: 10px;
         box-sizing: border-box;
     }
     button {
@@ -99,14 +99,12 @@
 
 
 <div class="container">
-    <h1>Registro de Doctor </h1>
-    <form id="registroForm">
-        <input type="text" id="nameInput" placeholder="Nombre">
-        <input type="email" id="emailInput" placeholder="Correo Electrónico">
-        <input type="password" id="passwordInput" placeholder="Contraseña">
-        <input type="password" id="confirmPassword" placeholder="Confirmar Contraseña">
-        <button id="signupButton">Registrar</button>
-    </form>
+    <h1>Registro de Doctor </h1> <br><br>
+    <input id="nameInput" type="text" placeholder="Nombre completo"> <br><br>
+    <input id= "emailInput" type="email" placeholder="Correo electrónico"><br><br>
+    <input type="password" id="passwordInput" placeholder="Contraseña"><br><br>
+    <input type="password" id="confirmPassword" placeholder="Confirmar Contraseña"><br><br>
+    <button id="signupButton">Registrar</button>
 </div>
 
 <script>

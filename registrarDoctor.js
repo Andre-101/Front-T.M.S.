@@ -3,7 +3,7 @@ const emailInput = document.getElementById('emailInput');
 const passwordInput = document.getElementById('passwordInput');
 const signupButton = document.getElementById('signupButton');
 
-const URL_BASE = "http://127.0.0.1:5501/registrarDoctor.html"; //cambiar URL 
+const URL_BASE = "http://127.0.0.1:8080"; //cambiar URL 
 
 //EVENTOS
 signupButton.addEventListener('click', signup);
@@ -30,6 +30,7 @@ async function postUser(user){
     let json = JSON.stringify(user);
     console.log(json);
 
+    //HTTP REquest
     let response = await fetch(URL_BASE+'/doctor/create',{
         method: 'POST',
         headers: {
@@ -38,8 +39,10 @@ async function postUser(user){
         body: json
     });
 
-    console.log(response);
-    location.href = "registrarDoctor.html"
+    let body = await response.json()
+    console.log(body);
+    alert(body.description);
+    //location.href = "registrarDoctor.html"
 }
 
 

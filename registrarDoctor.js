@@ -3,7 +3,7 @@ const emailInput = document.getElementById('emailInput');
 const passwordInput = document.getElementById('passwordInput');
 const signupButton = document.getElementById('signupButton');
 
-const URL_BASE = "https://9bf8-200-3-193-78.ngrok-free.app"; //cambiar URL 
+const URL_BASE = "http://127.0.0.1:5501/registrarDoctor.html"; //cambiar URL 
 
 //EVENTOS
 signupButton.addEventListener('click', signup);
@@ -21,7 +21,7 @@ function signup(){
         password: password,
         email: email
     };
-
+    console.log(user);
     postUser(user);
 }
 
@@ -30,7 +30,7 @@ async function postUser(user){
     let json = JSON.stringify(user);
     console.log(json);
 
-    let response = await fetch(URL_BASE+'/user/create',{
+    let response = await fetch(URL_BASE+'/doctor/create',{
         method: 'POST',
         headers: {
             'Content-Type':'application/json'
@@ -39,7 +39,7 @@ async function postUser(user){
     });
 
     console.log(response);
-    location.href = "index.html"
+    location.href = "registrarDoctor.html"
 }
 
 

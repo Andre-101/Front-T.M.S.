@@ -27,29 +27,13 @@ function signup(){
     postUser(user);
 }
 
-//FUNCIONES
-function logout(){
-    axios.get('/logout') // Envía una solicitud GET al endpoint /logout
-        .then(response => {
-            // Maneja la respuesta del servidor
-            console.log(response.data); // Muestra la respuesta del servidor en la consola
-            // Redirige a la página de inicio de sesión u otra página relevante
-            window.location.href = '/registrarDoctor.html'; // Cambia '/login' por la URL de tu página de inicio de sesión
-        })
-        .catch(error => {
-            // Maneja los errores
-            console.error('Error al cerrar sesión:', error);
-            alert('Error al cerrar sesión. Por favor, intenta de nuevo.');
-        });
-}
-
 async function postUser(user){
     //Obj a JSON
     let json = JSON.stringify(user);
     console.log(json);
 
     //HTTP REquest
-    let response = await fetch(URL_BASE+'/doctor/create',{
+    let response = await fetch(URL_BASE+'/user/create',{
         method: 'POST',
         headers: {
             'Content-Type':'application/json'

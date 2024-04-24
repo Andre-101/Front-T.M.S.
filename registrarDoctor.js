@@ -44,5 +44,5 @@ async function postUser(user){
     let body = await response.json()
     console.log(body);
     alert(body.description);
-    //location.href = "registrarDoctor.html"
+    location.href = "registrarDoctor.html"
 }

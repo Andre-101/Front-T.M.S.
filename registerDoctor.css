@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url("https://s3-alpha-sig.figma.com/img/74aa/86ba/dee6aea294b92535857bfc8e5b42f027?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VJsmVhLlYuQSzJktUMKXWgGWclUx75pS3~Yt7JPMrCZeg3~gNC30vk6kKQwgfgfnzLtYhpLr5d~ho-ugMfc8OK18AcVpAhqyT6XYGyvoveq7KcFcr7MsmbM-6q2uMxJtImv0~hL4DBmAFzn9KF~obmdYMNIcUpIgrrR92kl98DlgJmRBy7uyeuy8E967XKrX4ibRuNQKDXaWPfO7xF0iX03sWXdeQqQYlsVjYVZ1njBMluKjiMcwmx-Bx48VfucdPlUO3WWXrroXGD7Lr4zHLoSnVp7kubqlTyufls-ULpqUSUzTi~WoEafNx5Xf07rwwuPDAfOFw6qCf~-LhRejFA__   "); /* Establecer la imagen como fondo */
+    height: 708px;
+    width: 1333px;
+    background-size: cover; /* Para cubrir todo el cuerpo */
+    background-repeat: no-repeat; /* Evitar la repetición de la imagen */
+    background-position: center; /* Centrar la imagen */
+    margin: 0; /* Eliminar los márgenes predeterminados */
+    padding: 0; /* Eliminar el relleno predeterminado */
+}
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    text-align: center;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+button {
+    background-color: #36D2C9;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+button:hover {
+    opacity: 0.8;
+}
+
+/* MEZCLA DE PROPIEDAES*/ 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    overflow: hidden; /* Para que el color de fondo se muestre correctamente */
+}
+.header-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #36D2C9; /* Color de fondo vertical */
+    z-index: -1; /* Colocar detrás del contenido del encabezado */
+    width: 250px;
+    height: 700px;
+    padding: 10px;
+    left: -5px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+footer {
+    color: black;
+    position: fixed;
+    bottom: 10px;
+    right: 1400px;
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+header h1, header h2, header h3 {
+    font-family: "Inter", sans-serif;
+}
+footer h4 {
+    font-family: "Inter", sans-serif;
+}

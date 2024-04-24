@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Registro de Usuario</title>
+
+<link rel="stylesheet" href="registerDoctor.css">
+</head>
+
+<body>
+
+<header>
+    <div class="header-bg"> <!-- Div para el color de fondo vertical -->
+    <h1>Home</h1>
+    <h3>Pacientes</h3>
+    <h3>Registrar nuevo usuario</h3>
+    </div>
+</header>
+
+<footer>
+    <button onclick="logout()">Logout</button>
+</footer>
+
+
+<div class="container">
+    <h1>Registro de Doctor </h1> <br><br>
+    <input id="nameInput" type="text" placeholder="Nombre completo"> <br><br>
+    <input id= "emailInput" type="email" placeholder="Correo electrónico"><br><br>
+    <input type="password" id="passwordInput" placeholder="Contraseña"><br><br>
+    <input type="password" id="confirmPassword" placeholder="Confirmar Contraseña"><br><br>
+    <button id="signupButton">Registrar</button>
+</div>
+
+<script>
+    function registrar() {
+
+        if (password !== confirmPassword) {
+            alert("Las contraseñas no coinciden");
+            return;
+        }
+        alert("¡Se ha registrado con éxito!");
+    }
+
+</script>
+
+<script src="./registerDoctor.js"></script>
+
+
+</body>
+</html>

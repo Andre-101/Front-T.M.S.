@@ -14,7 +14,7 @@ signupButton.addEventListener('click', async function(){
 
     console.log(loginCred)
 
-    let response =  await fetch(URL_BASE + '/login',{
+    let response =  await fetch(URL_BASE + '/loginAdmin',{
         method : 'POST',
         headers : {
             'Content-Type': 'application/json'

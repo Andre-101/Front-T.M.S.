@@ -27,6 +27,13 @@ function signup(){
     postUser(user);
 }
 
+
+//FUNCIONES
+function logout(){
+    // Redirigir al usuario a la página de inicio de sesión
+    window.location.href = "http://127.0.0.1:5500/Front-TMS/loginInicialApp.html";
+}
+
 async function postUser(user){
     //Obj a JSON
     let json = JSON.stringify(user);
@@ -44,5 +51,5 @@ async function postUser(user){
     let body = await response.json()
     console.log(body);
     alert(body.description);
-    location.href = "registrarDoctor.html"
+    //location.href = "registrarDoctor.html"
 }

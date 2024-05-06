@@ -1,14 +1,16 @@
 const nameInput = document.getElementById('nameInput');
 const emailInput = document.getElementById('emailInput');
 const passwordInput = document.getElementById('passwordInput');
-const signupButton = document.getElementById('signupButton');
+const signupAdminButton = document.getElementById('signupAdminButton');
+const logoutButton = document.getElementById('logoutButton');
 
 const URL_BASE = "http://127.0.0.1:8080"; //cambiar URL 
 
 //EVENTOS
-signupButton.addEventListener('click', signup);
+signupAdminButton.addEventListener('click', signup);
+logoutButton.addEventListener('click', logout);
 
-
+//Comentario
 
 //FUNCIONES
 function signup(){
@@ -25,13 +27,20 @@ function signup(){
     postUser(user);
 }
 
+
+//FUNCIONES
+function logout(){
+    // Redirigir al usuario a la página de inicio de sesión
+    window.location.href = "http://127.0.0.1:5500/Front-TMS/loginInicialApp.html";
+}
+
 async function postUser(user){
     //Obj a JSON
     let json = JSON.stringify(user);
     console.log(json);
 
     //HTTP REquest
-    let response = await fetch(URL_BASE+'/doctor/create',{
+    let response = await fetch(URL_BASE+'/user/createAdmin',{
         method: 'POST',
         headers: {
             'Content-Type':'application/json'
@@ -44,5 +53,3 @@ async function postUser(user){
     alert(body.description);
     //location.href = "registrarDoctor.html"
 }
-
-

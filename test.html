@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .box {
+            width: 45%;
+            padding: 20px;
+            border: 1px solid #36D2C9;
+            border-radius: 5px;
+        }
+
+        .info-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .index {
+            margin-bottom: 10px;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #36D2C9;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h2 class="info-title">Info del paciente</h2>
+            <div class="index">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+            </div>
+            <div class="index">
+                <label for="cc">Cédula:</label>
+                <input type="text" id="cc" name="cc">
+            </div>
+            <div class="index">
+                <label for="diagnostico">Diagnóstico:</label>
+                <input type="text" id="diagnostico" name="diagnostico">
+            </div>
+            <div class="index">
+                <label for="nota">Nota:</label>
+                <textarea id="nota" name="nota"></textarea>
+            </div>
+        </div>
+        <div class="box">
+            <h2 class="info-title">Gráfico de la prueba</h2>
+            <!-- Aquí puedes agregar tu gráfico si tienes uno -->
+        </div>
+    </div>
+    <div class="button-container">
+        <button class="button">Comenzar</button>
+    </div>
+</body>
+</html>

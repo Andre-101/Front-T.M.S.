@@ -5,9 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="login.css">
-</head>
-<body>
 
+    
+</head>
+<style>
+    .header-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #36D2C9; /* Color de fondo vertical */
+        z-index: -1; /* Colocar detrás del contenido del encabezado */
+        width: 250px;
+        height: 700px;
+        padding: 10px;
+        left: -5px;
+        gap: 0px;
+        opacity: 0px;
+    }
+</style>
+
+<header>
+    <div class="header-bg"> <!-- Div para el color de fondo vertical -->
+    
+</header>
+
+<body>
+    
     <div class="container">
         <h1>Iniciar sesion Doctor</h1><br></br>
         <input id="emailInput" type="email" placeholder="Correo electrónico"><br></br>
@@ -19,6 +44,8 @@
     </footer>
     
 </body>
+
+
 
 <script src="loginDoctor.js"></script>
 </html>

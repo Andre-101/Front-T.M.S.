@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Doctores</title>
+    <style>
+        body {
+
+            
+            font-family: Arial, sans-serif;
+            background-color: #36D2C9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .doctor-list {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .doctor-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .doctor-item:last-child {
+            border-bottom: none;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <h1>Lista de Doctores</h1>
+    <div class="doctor-list" id="doctorList">
+        <!-- Los doctores se mostrarán aquí -->
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("http://localhost:8080/user/listDoctor")
+                .then(response => response.json())
+                .then(data => {
+                    const doctorList = document.getElementById("doctorList");
+                    data.forEach(doctor => {
+                        const doctorItem = document.createElement("div");
+                        doctorItem.className = "doctor-item";
+                        doctorItem.innerHTML = `
+                            <h2>${doctor.name}</h2>
+                            <p>Email: ${doctor.email}</p>
+                        `;
+                        doctorList.appendChild(doctorItem);
+                    });
+                })
+                .catch(error => {
+                    console.error("Error fetching doctor data:", error);
+                });
+        });
+    </script>
+</body>
+</html>

@@ -97,27 +97,25 @@
 
 
 <div class="container">
-    <h1>Registro de Doctor </h1> <br><br>
+    <h1>Registro de Pacientes</h1> <br><br>
     <input id="nameInput" type="text" placeholder="Nombre completo"> <br><br>
-    <input id= "emailInput" type="email" placeholder="Correo electrónico"><br><br>
-    <input type="password" id="passwordInput" placeholder="Contraseña"><br><br>
-    <input type="password" id="confirmPassword" placeholder="Confirmar Contraseña"><br><br>
-    <button id="signupAdminButton">Registrar Admin</button>
+    <input id="emailInput" type="email" placeholder="Correo electrónico"><br><br>
+    <input type="cedulaInput" type="text" placeholder="Cedula de Ciudadania"><br><br>
+    <input type="ageInput" type="text" placeholder="Edad"><br><br>
+    <input type="genderInput" type="text"" placeholder="Genero de Identificacion"><br><br>
+
+    <!--<label for="fechaAnotacion" id="labelFecha">Fecha de Anotación:</label><br>
+    <input type="date" id="fechaAnotacionInput" placeholder="Selecciona una fecha"><br><br>
+
+    <form action="/procesar_formulario" method="post" id="fotoPacienteInput" enctype="multipart/form-data">
+        <label for="photo" id="labelFoto">Selecciona una foto:</label>
+        <input type="file" id="photoInput" placeholder="Selecciona una foto">
+    </form>-->
+
+    <button id="signupButton">Registrar Paciente</button>
 </div>
 
-<script>
-    function registrar() {
-
-        if (password !== confirmPassword) {
-            alert("Las contraseñas no coinciden");
-            return;
-        }
-        alert("¡Se ha registrado con éxito!");
-    }
-
-</script>
-
-<script src="./registerAdmin.js"></script>
+<script src="./registrarPacientes.js"></script>
 
 </body>
 </html>

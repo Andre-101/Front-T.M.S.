@@ -1,37 +1,40 @@
 const nameInput = document.getElementById('nameInput');
 const emailInput = document.getElementById('emailInput');
-const passwordInput = document.getElementById('passwordInput');
+const cedulaInput = document.getElementById('cedulaInput');
+const ageInput = document.getElementById('ageInput');
+const genderInput = document.getElementById('genderInput');
+
 const signupButton = document.getElementById('signupButton');
-const logoutButton = document.getElementById('logoutButton');
+const logoutButton = document.querySelector('button');
 
-const URL_BASE = "http://127.0.0.1:8080"; //cambiar URL 
+const URL_BASE = "http://127.0.0.1:8080"; // Cambiar URL 
 
-//EVENTOS
+// Eventos
 signupButton.addEventListener('click', signup);
 logoutButton.addEventListener('click', logout);
 
-//Comentario
-
-//FUNCIONES
+// Funciones
 function signup(){
     let name = nameInput.value;
-    let password = passwordInput.value;
     let email = emailInput.value;
+    let cedula = cedulaInput.value;
+    let age = ageInput.value;
+    let gender = genderInput.value;
 
     let user = {
         name: name,
-        password: password,
-        email: email
+        email: email,
+        cedula: cedula,
+        age: age,
+        gender: gender
     };
     console.log(user);
     postUser(user);
 }
 
-
-//FUNCIONES
 function logout(){
     // Redirigir al usuario a la página de inicio de sesión
-    window.location.href = "http://127.0.0.1:5500/loginInicialApp.html";
+    window.location.href = "http://127.0.0.1:5501/loginInicialApp.html";
 }
 
 async function postUser(user){
@@ -40,7 +43,7 @@ async function postUser(user){
     console.log(json);
 
     //HTTP REquest
-    let response = await fetch(URL_BASE+'/user/create',{
+    let response = await fetch(URL_BASE+'/user/createPatient',{
         method: 'POST',
         headers: {
             'Content-Type':'application/json'

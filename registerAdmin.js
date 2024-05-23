@@ -31,7 +31,7 @@ function signup(){
 //FUNCIONES
 function logout(){
     // Redirigir al usuario a la página de inicio de sesión
-    window.location.href = "http://127.0.0.1:5500/Front-TMS/loginInicialApp.html";
+    window.location.href = "http://127.0.0.1:5500/loginInicialApp.html";
 }
 
 async function postUser(user){

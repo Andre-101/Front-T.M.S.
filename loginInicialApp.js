@@ -4,19 +4,19 @@ const loginDoctorButton = document.getElementById('loginDoctorButton');
 const URL_BASE= "http://127.0.0.1:8080";
 
 //EVENTOS
-loginAdminButton.addEventListener('click', loginAdmin);
-loginDoctorButton.addEventListener('click', loginDoctor);
+loginAdminButton.addEventListener('click', loginAdminButton);
+loginDoctorButton.addEventListener('click', loginDoctorButton);
 
 
 //FUNCIONES
-function loginAdmin(){
+function loginAdminButton(){
     // Redirigir al usuario a la página de inicio de sesión
-    window.location.href = "http://127.0.0.1:5500/Front-TMS/loginAdmin.html";
+    window.location.href = "http://127.0.0.1:5501/loginAdmin.html";
 }
 
-function loginDoctor(){
+function loginDoctorButton(){
     // Redirigir al usuario a la página de inicio de sesión
-    window.location.href = "http://127.0.0.1:5500/Front-TMS/loginDoctor.html";
+    window.location.href = "http://127.0.0.1:5501/loginDoctor.html";
 }
 
 

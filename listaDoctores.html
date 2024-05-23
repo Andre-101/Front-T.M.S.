@@ -34,8 +34,8 @@
         
     </style>
 </head>
-<body>
-    
+
+<body> 
     <h1>Lista de Doctores</h1>
     <input id="searchInput" placeholder="Buscar">
     <button id="searchButton">Buscar</button>
@@ -43,34 +43,8 @@
     <div id="container">
         
     </div>
-    
-
-
-    <!--
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch("http://localhost:8080/user/listDoctor")
-                .then(response => response.json())
-                .then(data => {
-                    const doctorList = document.getElementById("doctorList");
-                    data.forEach(doctor => {
-                        const doctorItem = document.createElement("div");
-                        doctorItem.className = "doctor-item";
-                        doctorItem.innerHTML = `
-                            <h2>${doctor.name}</h2>
-                            <p>Email: ${doctor.email}</p>
-                        `;
-                        doctorList.appendChild(doctorItem);
-                    });
-                })
-                .catch(error => {
-                    console.error("Error fetching doctor data:", error);
-                });
-        });
-    </script>
-    -->
-
-    <script src="./listaDoctores.js"> </script>
-
 </body>
+
+<script src="./listaDoctores.js"> </script>
+
 </html>

@@ -4,9 +4,26 @@ const searchInput = document.getElementById('searchInput');
 const searchButton = document.getElementById('searchButton');
 
 
-const URL_BASE = 'http://localhost:8080'; // Asegúrate de que la URL base sea correcta
+const URL_BASE = 'http://localhost:8080';
 
-getDoctors();
+//EVENTOS
+searchButton.addEventListener('click', search);
+
+
+//FUNCIONES
+async function search(){
+    let email = searchInput.value;
+    let response = await fetch(`${URL_BASE}/doctor/searchByEmail/${email}`);
+    if(response.status === 200){
+
+    }
+    else if(response.status === 400){
+        
+    }
+    let doctor = await response.json();
+    console.log(doctor);
+}
+
 
 async function getDoctors() {
     try {
@@ -46,7 +63,7 @@ async function getDoctors() {
 
 async function deleteDoctorById(id) {
     try {
-        let response = await fetch(`${URL_BASE}/user/deleteDoctor/${id}`, {
+        let response = await fetch(`${URL_BASE}/doctor/delete/${id}`, {
             method: 'DELETE'
         });
         if (!response.ok) {

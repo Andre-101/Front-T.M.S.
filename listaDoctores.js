@@ -1,3 +1,4 @@
+
 const container = document.getElementById('container');
 const searchInput = document.getElementById('searchInput');
 const searchButton = document.getElementById('searchButton');
@@ -9,7 +10,7 @@ getDoctors();
 
 async function getDoctors() {
     try {
-        let response = await fetch(`${URL_BASE}/user/listDoctor`);
+        let response = await fetch(`${URL_BASE}/doctor/list`);
         if (!response.ok) {
             throw new Error('Network response was not ok ' + response.statusText);
         }
@@ -59,6 +60,3 @@ async function deleteDoctorById(id) {
 }
 
 document.addEventListener('DOMContentLoaded', getDoctors);
-
-
-

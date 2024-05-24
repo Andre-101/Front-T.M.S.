@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pacientes</title>
+    <style>
+        body {
+
+            
+            font-family: Arial, sans-serif;
+            background-color: #36D2C9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .patient-list {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .patient-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .patient-item:last-child {
+            border-bottom: none;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <input id="searchInput" placeholder="Buscar">
+    <button id="searchButton">Buscar</button>
+
+    <h1>Lista de Pacientes</h1>
+    <div class="patient-list" id="patientList">
+        <!-- Los doctores se mostrarán aquí -->
+    </div>
+</body>
+
+<script src="./listaPacientes.js"> </script>
+
+</html>

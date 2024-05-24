@@ -4,19 +4,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Registro de Usuario</title>
 <style>
     body {
         font-family: Arial, sans-serif;
-        background: url("https://s3-alpha-sig.figma.com/img/74aa/86ba/dee6aea294b92535857bfc8e5b42f027?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VJsmVhLlYuQSzJktUMKXWgGWclUx75pS3~Yt7JPMrCZeg3~gNC30vk6kKQwgfgfnzLtYhpLr5d~ho-ugMfc8OK18AcVpAhqyT6XYGyvoveq7KcFcr7MsmbM-6q2uMxJtImv0~hL4DBmAFzn9KF~obmdYMNIcUpIgrrR92kl98DlgJmRBy7uyeuy8E967XKrX4ibRuNQKDXaWPfO7xF0iX03sWXdeQqQYlsVjYVZ1njBMluKjiMcwmx-Bx48VfucdPlUO3WWXrroXGD7Lr4zHLoSnVp7kubqlTyufls-ULpqUSUzTi~WoEafNx5Xf07rwwuPDAfOFw6qCf~-LhRejFA__   "); /* Establecer la imagen como fondo */
+        background: url("https://s3-alpha-sig.figma.com/img/74aa/86ba/dee6aea294b92535857bfc8e5b42f027?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VJsmVhLlYuQSzJktUMKXWgGWclUx75pS3~Yt7JPMrCZeg3~gNC30vk6kKQwgfgfnzLtYhpLr5d~ho-ugMfc8OK18AcVpAhqyT6XYGyvoveq7KcFcr7MsmbM-6q2uMxJtImv0~hL4DBmAFzn9KF~obmdYMNIcUpIgrrR92kl98DlgJmRBy7uyeuy8E967XKrX4ibRuNQKDXaWPfO7xF0iX03sWXdeQqQYlsVjYVZ1njBMluKjiMcwmx-Bx48VfucdPlUO3WWXrroXGD7Lr4zHLoSnVp7kubqlTyufls-ULpqUSUzTi~WoEafNx5Xf07rwwuPDAfOFw6qCf~-LhRejFA__ ");
         height: 708px;
         width: 1333px;
-        background-size: cover; /* Para cubrir todo el cuerpo */
-        background-repeat: no-repeat; /* Evitar la repetición de la imagen */
-        background-position: center; /* Centrar la imagen */
-        margin: 0; /* Eliminar los márgenes predeterminados */
-        padding: 0; /* Eliminar el relleno predeterminado */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 0;
+        padding: 0;
     }
     .container {
         max-width: 400px;
@@ -41,8 +40,6 @@
     button:hover {
         opacity: 0.8;
     }
-
-    /* MEZCLA DE PROPIEDAES*/ 
     header {
         position: fixed;
         top: 0;
@@ -50,7 +47,7 @@
         width: 100%;
         padding: 10px;
         color: white;
-        overflow: hidden; /* Para que el color de fondo se muestre correctamente */
+        overflow: hidden;
     }
     .header-bg {
         position: fixed;
@@ -58,8 +55,8 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #36D2C9; /* Color de fondo vertical */
-        z-index: -1; /* Colocar detrás del contenido del encabezado */
+        background-color: #36D2C9;
+        z-index: -1;
         width: 250px;
         height: 700px;
         padding: 10px;
@@ -67,13 +64,12 @@
         gap: 0px;
         opacity: 0px;
     }
-
     footer {
         color: black;
         position: fixed;
         bottom: 10px;
         right: 1400px;
-        text-align: left; /* Alineación del texto a la izquierda */
+        text-align: left;
     }
     header h1, header h2, header h3 {
         font-family: "Inter", sans-serif;
@@ -87,32 +83,22 @@
 <body>
 
 <header>
-    <div class="header-bg"> <!-- Div para el color de fondo vertical -->
-    
+    <div class="header-bg"></div>
 </header>
 
 <footer>
     <button onclick="logout()">Logout</button>
 </footer>
 
-
 <div class="container">
     <h1>Registro de Pacientes</h1> <br><br>
     <input id="nameInput" type="text" placeholder="Nombre completo"> <br><br>
-    <input id="emailInput" type="email" placeholder="Correo electrónico"><br><br>
-    <input type="cedulaInput" type="text" placeholder="Cedula de Ciudadania"><br><br>
-    <input type="ageInput" type="text" placeholder="Edad"><br><br>
-    <input type="genderInput" type="text"" placeholder="Genero de Identificacion"><br><br>
+    <input id="ageInput" type="text" placeholder="Edad"><br><br>
+    <input id="genderInput" type="text" placeholder="Genero de Identificacion"><br><br>
 
-    <!--<label for="fechaAnotacion" id="labelFecha">Fecha de Anotación:</label><br>
-    <input type="date" id="fechaAnotacionInput" placeholder="Selecciona una fecha"><br><br>
-
-    <form action="/procesar_formulario" method="post" id="fotoPacienteInput" enctype="multipart/form-data">
-        <label for="photo" id="labelFoto">Selecciona una foto:</label>
-        <input type="file" id="photoInput" placeholder="Selecciona una foto">
-    </form>-->
-
-    <button id="signupButton">Registrar Paciente</button>
+    <button id="signupButton">Registrar Paciente</button><br><br>
+    <button id="measureButton">Iniciar Medición</button>
+    <div id="measurements"></div>
 </div>
 
 <script src="./registrarPacientes.js"></script>

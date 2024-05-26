@@ -40,9 +40,16 @@
             border-radius: 5px;
             cursor: pointer;
         }
-    </style>
-</head>
 
+        #sensorData {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+
+
+</head>
 <body>
     <div class="container">
         <div class="box">
@@ -70,7 +77,12 @@
         </div>
     </div>
     <div class="button-container">
-        <button class="button">Comenzar</button>
+        <button class="button" id="startButton">Comenzar</button>
     </div>
+    <div id="sensorData"></div>
 </body>
+
+
+<script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+<script src="test.js" defer></script>
 </html>

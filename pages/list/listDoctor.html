@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ListDoctors</title>
+    <link rel="icon" href="../../images/logoTMS.png">
+    <link rel="stylesheet" href="list.css">
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css'>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <div class="logo_name">T.M.S.</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav_list">
+            <li>
+                <a href="../home/homeAdmin.html">
+                    <i class='bx bx-home'></i>
+                    <span class="links_name">Home</span>
+                </a>
+                <span class="tooltip">Home</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cog'></i>
+                    <span class="links_name">Ajustes</span>
+                </a>
+                <span class="tooltip">Ajustes</span>
+            </li>
+            <div class="content">
+                <div class="user">
+                    <div class="user_details">
+                        <i class='bx bxs-user' ></i>
+                        <div class="role">
+                            <div class="name">Admin</div>
+                        </div>
+                    </div>
+                    <a>
+                        <i class='bx bx-log-out' id="log_out"></i>
+                    </a>
+                </div>
+            </div>
+        </ul>
+    </div>
+    <div class="infoDoctores">
+        <div class="text">Tabla de doctores</div>
+        <table id="doctorTable">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas se insertarán aquí dinámicamente -->
+            </tbody>
+        </table>
+        <button id="addUserButton">
+            <i class='bx bx-user-plus'></i> 
+        </button>
+    </div>
+    <script src="listDoctor.js"></script>
+</body>
+</html>

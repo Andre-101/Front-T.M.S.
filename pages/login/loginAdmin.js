@@ -1,11 +1,25 @@
+//CONSTANTES
+
 const emailInput = document.getElementById('emailInput');
 const passwordInput = document.getElementById('passwordInput');
 const signupButton = document.getElementById('signupButton');
+const gohome = document.getElementById('gohome');
 
-const URL_BASE= "http://127.0.0.1:8080";
+
+//VARIABLES GLOBALES
+
+let URL_BASE= "http://127.0.0.1:8080";
+
 
 //EVENTOS
-signupButton.addEventListener('click', async function(){
+
+gohome.addEventListener("click", comeback);
+signupButton.addEventListener('click', login);
+
+
+//FUNCIONES
+
+async function login(){
 
     let loginCred = {
         email: emailInput.value,
@@ -31,11 +45,13 @@ signupButton.addEventListener('click', async function(){
 
         let user = JSON.stringify(data);
         window.localStorage.setItem('user', user);
-        location.href='homeAdmin.html';
+        location.href='../home/homeAdmin.html';
     }else{
         alert(data.description);
     }
 
-});
+}
 
-
+function comeback() {
+    window.location.href = "../../index.html";
+}

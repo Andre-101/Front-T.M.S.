@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --black-color: #36D2C9;
+    --white-color: #fff;
+    --sky-color: #E4E9F7;
+    --light-black: #36D2C9;
+}
+
+body {
+    background-image: url(../../images/Background1.png);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+    color: var(--white-color);
+    background: var(--black-color);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 78px;
+    background: var(--black-color);
+    padding: 6px 14px;
+    z-index: 99;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active {
+    width: 180px;
+}
+
+.sidebar .logo_content .logo {
+    color: var(--white-color);
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active .logo_content .logo {
+    opacity: 1;
+    pointer-events: none;
+}
+
+.logo_content .logo .logo_name {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.sidebar #btn {
+    position: absolute;
+    color: var(--white-color);
+    top: 6px;
+    left: 50%;
+    font-size: 30px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.sidebar.active #btn {
+    left: 80%;
+}
+
+.sidebar ul {
+    margin-top: 20px;
+}
+
+.sidebar ul li {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin: 5px 0;
+    list-style: none;
+    line-height: 50px;
+}
+
+.sidebar ul li .tooltip {
+    position: absolute;
+    left: 125px;
+    top: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 6px;
+    height: 35px;
+    width: 120px;
+    background: var(--white-color);
+    line-height: 35px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: 0s;
+    opacity: 0;
+    pointer-events: none;
+    display: block;
+}
+
+.sidebar ul li .tooltip::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid var(--white-color);
+    position: absolute;
+    left: -8px;
+    top: 7px;
+}
+
+.sidebar.active ul li .tooltip {
+    display: none;
+}
+
+.sidebar ul li:hover .tooltip {
+    transition: all 0.5s ease;
+    opacity: 1;
+    top: 50%;
+}
+
+.sidebar ul li a {
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 12px;
+    white-space: nowrap;
+    transition: all 0.4s ease;
+}
+
+.sidebar ul li a:hover {
+    color: var(--black-color);
+    background: var(--white-color);
+}
+
+.sidebar ul li i {
+    font-size: 23px;
+    font-weight: 400;
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.sidebar .links_name {
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.sidebar.active .links_name {
+    transition: 0s;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sidebar .content {
+    position: absolute;
+    color: var(--white-color);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.sidebar .content .user {
+    position: relative;
+    padding: 10px 6px;
+    height: 60px;
+    background: none;
+    transition: all 0.4s ease;
+}
+
+.sidebar.active .content .user {
+    background: var(--light-black);
+}
+
+.content .user .user_details {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    transition: all 0.4s ease;
+}
+
+.sidebar.active .user .user_details {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.content .user .user_details .bx {
+    font-size: 45px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.role {
+    margin-left: 10px;
+}
+
+#log_out {
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 50px;
+    line-height: 50px;
+    font-size: 28px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.4s ease;
+    color: white;
+}
+
+.sidebar.active .user #log_out {
+    left: 80%;
+    background: none;
+}
+
+#log_out:hover {
+    color: var(--black-color);
+    background: var(--white-color);
+}
+
+.sidebar.active .user #log_out:hover {
+    color: var(--black-color);
+    background: var(--white-color);
+}
+
+.infoDoctores {
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 78px);
+    left: 78px;
+    background: transparent;
+    padding: 20px;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active~.infoDoctores {
+    z-index: 100;
+    width: calc(100% - 240px);
+    left: 240px;
+}
+
+.infoDoctores .text {
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--light-black);
+    margin-bottom: 15px;
+}
+
+.infoDoctores p {
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    /* Hace que la tabla ocupe todo el ancho disponible */
+    border-collapse: collapse;
+    /* Elimina el espacio entre las celdas */
+    margin: 20px 0;
+    /* Agrega un poco de margen alrededor de la tabla */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    /* Sombra suave alrededor de la tabla */
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    /* Borde ligero para celdas y cabeceras */
+    padding: 10px 15px;
+    /* Espaciado dentro de cada celda */
+    text-align: left;
+    /* Alineación del texto a la izquierda */
+}
+
+th {
+    background-color: var(--black-color);
+    /* Color de fondo para las cabeceras */
+    color: #333;
+    /* Color del texto para las cabeceras */
+}
+
+tr:nth-child(odd) {
+    background-color: #e0e0e0;
+    /* Color de fondo para filas impares */
+}
+
+tr:hover {
+    background-color: #cfcfcf;
+    /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos para los botones en la tabla */
+#doctorTable button {
+    background-color: #36D2C9;
+    /* Fondo verde, igual que las cabeceras */
+    color: white;
+    /* Texto blanco */
+    border: none;
+    /* Sin bordes */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    padding: 5px 10px;
+    /* Padding moderado */
+    cursor: pointer;
+    /* Cursor en forma de mano para indicar clickeabilidad */
+    transition: background-color 0.3s;
+    /* Transición suave al cambiar de color */
+}
+
+/* Cambios en el botón al pasar el mouse */
+#doctorTable button:hover {
+    background-color: #45a049;
+    /* Un verde un poco más oscuro al hacer hover */
+}
+
+#addUserButton {
+    padding: 10px 20px;
+    /* Ajusta el padding según necesites */
+    background-color: #4caf99;
+    /* Color de fondo */
+    color: white;
+    /* Color del texto e icono */
+    border: none;
+    /* Sin bordes */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cursor en forma de mano */
+    transition: all 0.3s ease;
+    /* Transición suave para hover */
+    display: inline-flex;
+    /* Usa flex para centrar ícono y texto (si aplica) */
+    align-items: center;
+    /* Alinea verticalmente el contenido */
+    justify-content: center;
+    /* Centra el contenido horizontalmente */
+}
+
+#addUserButton .bx {
+    font-size: 30px;
+    vertical-align: middle;
+    /* Alineación vertical si hay texto */
+}
+
+#addUserButton:hover {
+    background-color: #45a049;
+    /* Color al hacer hover */
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    /* Sombra para efecto 3D */
+}
+
+#addUserButton:focus {
+    outline: none;
+    /* Sin contorno al enfocar */
+    box-shadow: 0 0 5px 2px rgba(0, 255, 0, 0.5);
+    /* Sombra de enfoque */
+}

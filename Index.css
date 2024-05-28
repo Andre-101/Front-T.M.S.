@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #36D2C9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.appinfo {
+    text-align: center;
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+
+.appinfo p {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.label {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+input[type=checkbox].toggle {
+    display: none;
+}
+
+input[type=checkbox].toggle+label {
+    display: inline-block;
+    height: 60px;
+    width: 200px;
+    position: relative;
+    font-size: 20px;
+    border: 4px solid #36D2C9;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+}
+
+input[type=checkbox].toggle+label:before {
+    position: absolute;
+    top: 4px;
+    height: 44px;
+    width: 44px;
+    content: '';
+    transition: all 0.3s ease;
+    z-index: 3;
+    border-radius: 50%;
+}
+
+input[type=checkbox].toggle+label:after {
+    width: 140px;
+    text-align: center;
+    z-index: 2;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+input[type=checkbox].toggle:not(:checked)+label {
+    background-color: azure;
+    text-align: right;
+}
+
+input[type=checkbox].toggle:not(:checked)+label:after {
+    content: attr(data-unchecked);
+    right: 0;
+    left: auto;
+    opacity: 1;
+    color: #36D2C9;
+}
+
+input[type=checkbox].toggle:not(:checked)+label:before {
+    left: 4px;
+    background-color: #36D2C9;
+}
+
+input[type=checkbox].toggle:checked+label {
+    background-color: aqua;
+    text-align: left;
+    border-color: yellow;
+}
+
+input[type=checkbox].toggle:checked+label:after {
+    content: attr(data-checked);
+    left: 4px;
+    right: auto;
+    opacity: 1;
+    color: white;
+}
+
+input[type=checkbox].toggle:checked+label:before {
+    left: 144px;
+    background-color: yellow;
+}
+
+button {
+    vertical-align: top;
+    margin-top: 12px;
+    margin-right: 10px;
+    width: 150px;
+    height: 40px;
+    padding: 10px 20px;
+    background-color: #36D2C9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: large;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/*
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #36D2C9;
+    z-index: -1;
+}
+
+.background.right {
+    left: 50%;
+}
+
+*/
